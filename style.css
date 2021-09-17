@@ -90,6 +90,10 @@ padding-right: 60px;
     color: black;
 }
 
+.form-control:focus{
+    background-color: cornflowerblue;
+}
+
   .time-label {
     background-color: transparent;
     border-radius: 0px;
