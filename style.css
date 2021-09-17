@@ -116,6 +116,10 @@ padding-right: 60px;
       border-bottom: solid black 2px;
   }
 
+  #final-input{
+    border-bottom: solid black 2px;
+  }
+
   .final-time {
     border-bottom: dashed black 2px;
   }
