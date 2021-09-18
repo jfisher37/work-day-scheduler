@@ -1,7 +1,6 @@
 // GIVEN I am using a daily planner to create a schedule
 // WHEN I open the planner
 // THEN the current day is displayed at the top of the calendar
-// let el9 = $('input[data-time="9"]')
 
 let currentDayEl = $('#currentDay');
 console.log(currentDayEl);
@@ -59,8 +58,8 @@ saveBtnEl.on('click', function(e){
 
 for (let i = 0; i < timeBlockEl.length; i++) {
     if (localStorage.getItem("to-do["+ i + "]") != null){
-    timeBlockEl[i].setAttribute('placeholder', localStorage.getItem("to-do["+ i + "]"));
-    console.log(localStorage.getItem("to-do["+ i + "]"))
+    timeBlockEl[i].setAttribute('value', localStorage.getItem("to-do["+ i + "]"));
+    console.log(localStorage.getItem("to-do["+ i + "]"));
     }
     
 }
