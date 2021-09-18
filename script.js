@@ -41,7 +41,30 @@ currentDayEl.text(
 // THEN I can enter an event
 // WHEN I click the save button for that timeblock
 
+
     //create an eventlistener - on click of save button, save text to local storage, set that text to placeholder text
+
+let saveBtnEl = $('button')
+
+saveBtnEl.on('click', function(e){
+    let clickedBtn = e.target;
+    for (let i = 0; i < timeBlockEl.length; i++) {
+        if(timeBlockEl[i].dataset.time === clickedBtn.dataset.time){
+            localStorage.setItem("to-do["+ i + "]", timeBlockEl[i].value);
+        };
+        
+    }
+    
+})
+
+for (let i = 0; i < timeBlockEl.length; i++) {
+    if (localStorage.getItem("to-do["+ i + "]") != null){
+    timeBlockEl[i].setAttribute('placeholder', localStorage.getItem("to-do["+ i + "]"));
+    console.log(localStorage.getItem("to-do["+ i + "]"))
+    }
+    
+}
+
 
 // THEN the text for that event is saved in local storage
 // WHEN I refresh the page
